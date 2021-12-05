@@ -31,7 +31,6 @@ export const postWithAuth = (url: string, data: any) => {
 };
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/72ede145-143c-46af-8802-c8ea25aea685/Untitled.png)
 
 이 때 사용자를 인증하기 위하여 OAuth 인증방식을 이용하고 있습니다.현재 헤더에 담긴 인증방식이 조금 생소하실 수도 있습니다. 
 
@@ -145,8 +144,6 @@ export enum ExercisePart {
 리액트의 구조에 대해 이해해볼 필요가 있습니다. 프론트엔드에서 리액트는 CSR(Client Side Rendering)을 도와줄 수 있도록 하는 웹 라이브러리입니다. 기존의 코드는 Server에 저장되어 있는 파일의 주소로 가서 화면에 불러왔지만 CSR은  **자바스크립트 파일을 브라우저에서 해석해 렌더링하는 방식입니다.** 클라이언트가 자바스크립트 파일을 브라우저에서 해석한 후 가상 DOM에 HTML을 렌더링합니다. 
 
 자 그렇다면 만약 서버에서 요청한 데이터가 변경되었다면 CSR은 이를 어떻게 처리할까요? CSR에서는 새로운 데이터가 반환되어야만 이를 인식하고 가상 DOM에 렌더링하게 됩니다. 컴포넌트에서 보여줘야 하는 내용이 사용자 인터랙션에 따라 바뀌어야 할 때 어떻게 구현하기 위해서 리액트 16.8 에서 Hooks 라는 기능이 도입되면서 함수형 컴포넌트에서도 상태를 관리할 수 있게 되었습니다. **useState** 라는 함수를 이용하면 됩니다! 
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/202c0442-dad0-4ee4-aced-df2bd2065577/Untitled.png)
 
 위의 코드에서도 확인했지만 아래의 코드를 보면 useState hook fucntion을 사용하여 동적으로 데이터의 상태를 확인하고 있습니다. 
 
