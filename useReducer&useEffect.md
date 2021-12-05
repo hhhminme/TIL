@@ -183,11 +183,32 @@ const handleClickAddFood = () => {
         postWithAuth(`${process.env.REACT_APP_API_ENDPOINT}/diet/histories`, data)
             .then(response => {
                 alert('added diet successfully');
-						**window.location.reload();**
+		window.location.reload();
             })
             .catch(e => {
                 alert('add diet fail')
                 console.log(e)
             })
     };
+
+    return (
+        <div className={"diet-detail-container"}>
+            <div className={"diet-title"}>
+                DIET
+            </div>
+            <div>
+                <DietDetailTable
+                    dailyDiet={dailyDiet}
+                    totalDietDetail={getTotalDietDetail()}
+                    foods={foods}
+                    selectedFoodId={selectedFoodId}
+                    onSelectFood={handleSelectFood}
+                    onClickAddFood={handleClickAddFood}
+                />
+            </div>
+        </div>
+    )
+};
+
+export default DietDetailContainer;
 ```
